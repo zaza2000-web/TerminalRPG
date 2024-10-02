@@ -1,9 +1,10 @@
 class Character:
     # constructor for character
-    def __init__(self,name,health,attack_power):
+    def __init__(self,name,health,attack_power,mana):
         self.name = name
         self.health = health
         self.attack_power = attack_power
+        self.mana = mana
     
     # check character's health
     def is_alive_character(self):
@@ -21,12 +22,16 @@ class Character:
 # make warrior class
 class Warrior(Character):
     def __init__(self,name,health = 500,attack_power = 40, mana = 50):
-        super().__init__(name)
+        super().__init__(name,health,attack_power,mana)
         self.health = health
         self.attack_power = attack_power
         self.mana = mana
         self.max_mana = mana
         self.recovery = False
+
+    def __str__(self):
+        return f"Current Class: {"Warrior"},player: {self.name} (HP:{self.health}, AttackPower: {self.attack_power}, Mana: {self.mana}/{self.mana})."
+
     
     # check if mana's value is enought for do something
 
@@ -69,10 +74,10 @@ class Warrior(Character):
                 self.mana += 5
             self.recovery = True
             return f"{self.name} recovered +5 mana. Current mana is {self.mana}"
+        
 
 
 
-  
 
 
         
