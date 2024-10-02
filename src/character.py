@@ -26,11 +26,13 @@ class Warrior(Character):
         self.attack_power = attack_power
         self.mana = mana
         self.max_mana = mana
+        self.recovery = False
     
     # check if mana's value is enought for do something
 
     def _check_mana(self,cost):
         if self.mana >= cost:
+            self.mana -= cost
             return True
         else:
             return False
@@ -40,8 +42,7 @@ class Warrior(Character):
     # this is buff for +30hp when he roar he get this buff
     def warrior_roar(self):
         cost = 10
-        if self.mana >= cost:
-            self.mana -= 10
+        if self._check_mana(cost):
             self.health  += 30
             return f"{self.name} start roar and get +30hp. currnet hp is: {self.health}"
         else:
@@ -50,8 +51,7 @@ class Warrior(Character):
     # warrior eating some food still he get +5 to his attack_power need mana also 10
     def warrior_eat(self):
         cost = 10
-        if self.mana >= cost:
-            self.mana -= 10
+        if self._check_mana(cost):
             self.attack_power += 5
             return f"{self.name} got +5 to power. currnet power is: {self.attack_power}"
         else:
