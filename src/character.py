@@ -30,7 +30,7 @@ class Warrior(Character):
     # this is buff for +30hp when he roar he get this buff
     def warrior_roar(self):
         cost = 10
-        if self.mana >= 10:
+        if self.mana >= cost:
             self.mana -= 10
             self.health  += 30
             return f"{self.name} start roar and get +30hp. currnet hp is: {self.health}"
