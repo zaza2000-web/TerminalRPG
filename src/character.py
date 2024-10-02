@@ -58,13 +58,8 @@ class Warrior(Character):
             return f"not enought mana {self.name} have {self.mana} but u need {cost}  for use 'Eat' "
     # warrior can sleep and recovery his mana +5 but max is 50 for this class 
     def warrior_sleep(self):
-        max_mana = 50
-        if self.mana == max_mana and not chance:
-            return f"Your max mana is {max_mana} you cant recover"
-        else:
-            self.mana += 5
-            chance -= 1
-            return f"{self.name} get +5 to mana. current mana is: {self.mana}"
+        
+  
 
 
         
