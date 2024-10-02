@@ -25,6 +25,16 @@ class Warrior(Character):
         self.health = health
         self.attack_power = attack_power
         self.mana = mana
+        self.max_mana = mana
+    
+    # check if mana's value is enought for do something
+
+    def _check_mana(self,cost):
+        if self.mana >= cost:
+            return True
+        else:
+            return False
+    
     # there i make buff's for warrior class
 
     # this is buff for +30hp when he roar he get this buff
