@@ -36,4 +36,26 @@ class Warrior(Character):
             return f"{self.name} start roar and get +30hp. currnet hp is: {self.health}"
         else:
             return f"not enought mana {self.name} have {self.mana} but u need {cost}  for use 'Roar' "
+
+    # warrior eating some food still he get +5 to his attack_power need mana also 10
+    def warrior_eat(self):
+        cost = 10
+        if self.mana >= cost:
+            self.mana -= 10
+            self.attack_power += 5
+            return f"{self.name} got +5 to power. currnet power is: {self.attack_power}"
+        else:
+            return f"not enought mana {self.name} have {self.mana} but u need {cost}  for use 'Eat' "
+    # warrior can sleep and recovery his mana +5 but max is 50 for this class 
+    def warrior_sleep(self):
+        chance = 1
+        max_mana = 50
+        if self.mana == max_mana and not chance:
+            return f"Your max mana is {max_mana} you cant recover"
+        else:
+            self.mana += 5
+            chance -= 1
+            return f"{self.name} get +5 to mana. current mana is: {self.mana}"
+
+
         
