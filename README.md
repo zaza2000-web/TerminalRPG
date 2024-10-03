@@ -23,7 +23,7 @@ Welcome to **Battle Game** — a text-based RPG where you control a warrior figh
 
 2. Navigate to the project folder:
     ```bash
-    cd battle-game
+    cd TerminalRPG
     ```
 
 3. Make sure you have Python 3 installed. You can check this by running:
@@ -46,5 +46,5 @@ Welcome to **Battle Game** — a text-based RPG where you control a warrior figh
 3. After choosing your buffs, the battle will begin, and your warrior will attack the goblin while the goblin counters.
 4. The game continues until one of the characters loses all health.
 
-### Example Usage
+
 
