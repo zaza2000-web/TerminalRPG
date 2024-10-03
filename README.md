@@ -18,7 +18,7 @@ Welcome to **Battle Game** — a text-based RPG where you control a warrior figh
 
 1. Clone the repository from GitHub:
     ```bash
-    git clone https://github.com/yourusername/battle-game.git
+    git clone https://github.com/zaza2000-web/battle-game.git
     ```
 
 2. Navigate to the project folder:
