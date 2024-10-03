@@ -34,8 +34,3 @@ def battle(player,goblin):
             print(f"Player {player.name} has been defeated by {goblin.name}")
             break
 
-if __name__ == "__main__":
-    player = Warrior("Garen")
-    goblin = Goblin()
-
-    battle(player,goblin)
