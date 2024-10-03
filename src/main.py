@@ -37,7 +37,7 @@ def is_game_start(answer):
             print("Game is started")
             return True
         else:
-            return False
+            sys.exit("goodbye!")
         
 def get_player_statistics(target):
     
