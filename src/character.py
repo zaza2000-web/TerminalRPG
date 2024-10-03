@@ -13,7 +13,7 @@ class Character:
     # make a logic how to attack
     def attack(self,enemy):
         if self.is_alive_character():
-            print(f"{self.name} attack {enemy} which {self.attack_power}")
+            print(f"{self.name} attack {enemy.name} and deal {self.attack_power} damage")
             enemy.health -= self.attack_power    
         else:
             print(f"{self.name} is defeated by {enemy.name}")

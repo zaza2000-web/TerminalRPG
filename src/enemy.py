@@ -15,7 +15,7 @@ class Goblin:
 
     def attack(self,enemy):
         if self.is_goblin_alive():
-            print(f"{self.name} attack {enemy.name} he deal {self.attack_power}")
+            print(f"{self.name} attack {enemy.name} and deal {self.attack_power} damage")
             enemy.health -= self.attack_power
         else:
             print(f"{self.name} defeated by {enemy.name}")
