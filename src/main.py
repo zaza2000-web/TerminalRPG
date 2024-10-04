@@ -10,8 +10,7 @@ def main():
     goblin = Goblin()
     answer = input("Start game? Yes/No: ")
     running = is_game_start(answer)
-    player_statistic = get_player_statistics(player)
-    print(player_statistic)
+
 
     while running:
          try:
